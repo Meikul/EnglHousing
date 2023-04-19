@@ -13,7 +13,7 @@ $aggieBlue: #05325B;
 }
 
 :root {
-  --break-y: 500px;
+  --break-y: 100%;
 }
 
 body {
@@ -23,19 +23,43 @@ body {
   height: 100%;
 }
 
-.main-site {
+.page {
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page.cracked::after{
+  visibility: visible;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // background: rgba($color: #000000, $alpha: 0.3);
+  z-index: 2;
+}
+
+.main-page {
   position: absolute;
   width: 100%;
-
-  clip-path: polygon(0 0, 0 calc(var(--break-y) + 50px), 100% calc(var(--break-y) - 50px), 100% 0);
+  clip-path: polygon(0 0, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 0);
   // background: #E06666;
 }
 
-.shadow-site {
+.shadow-page {
   position: absolute;
   width: 100%;
-  clip-path: polygon(0 100%, 0 calc(var(--break-y) + 50px), 100% calc(var(--break-y) - 50px), 100% 100%);
+  top: 0;
+  clip-path: polygon(0 100%, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 100%);
   // background: #F6B26B;
+  background: rgba(200, 100, 100, 0.2);
+  transition: top 2s ease;
+}
+
+.shadow-page.cracked {
+  top: 200px;
 }
 
 .content {
