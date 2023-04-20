@@ -19,7 +19,6 @@ body {
 }
 
 .page {
-  overflow: hidden;
   z-index: 1;
   background-color: white;
 }
@@ -62,7 +61,7 @@ body {
 
 .shadow-page.cracked {
   visibility: visible;
-  top: 200px;
+  top: 400px;
 }
 
 .shadow-page.healed {

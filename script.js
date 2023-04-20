@@ -42,18 +42,26 @@ function crackPage(e) {
   console.log(e);
   // root.style.setProperty('--break-y', e.pageY + "px");
   const crackPoints = [];
-  const zigCount = 10;
-  const maxDeviation = 50;
+  const zigCount = 11;
+  const maxDeviation = 70;
   let caughtClick = false;
+  const zigLength = ((100 / (zigCount-1)));
+  const pageXPct = (e.pageX / document.documentElement.clientWidth) * 100;
 
   for (let i = 0; i < zigCount; i++) {
-    const x = Math.round((100 / (zigCount-1)) * i);
-    const y = e.pageY + Math.floor(Math.random() * maxDeviation);
-    if (!caughtClick && x > (e.pageX/document.documentElement.clientWidth)*100){
-      crackPoints.push(`${e.pageX}px ${e.pageY}px`);
-      console.log(`${e.pageX}px ${e.pageY}px`);
-      caughtClick = true;
+    let x = zigLength * i;
+    let y = e.pageY + Math.floor(Math.random() * maxDeviation) - maxDeviation/2;
+    if (Math.abs(pageXPct - x) < zigLength/2){
+      // overwrite closest zig point to cursor position
+      console.log(Math.abs(pageXPct - x), zigLength, i);
+      x = pageXPct;
+      y = e.pageY;
     }
+    // if (!caughtClick && x > (e.pageX/document.documentElement.clientWidth)*100){
+    //   crackPoints.push(`${e.pageX}px ${e.pageY}px`);
+    //   console.log(`${e.pageX}px ${e.pageY}px`);
+    //   caughtClick = true;
+    // }
     const point = `${x}%  ${y}px`;
 
     crackPoints.push(point);
