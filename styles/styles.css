@@ -13,14 +13,22 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  background: #222;
+  -webkit-filter: drop-shadow(0px 20px 4px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 20px 4px rgba(0, 0, 0, 0.5));
 }
 
 .page {
   overflow: hidden;
   z-index: 1;
+  background-color: white;
 }
 
-.page.cracked::after {
+.page .page-cover {
+  visibility: hidden;
+}
+
+.page:not(.healed) .page-cover {
   visibility: visible;
   display: block;
   content: '';
@@ -35,23 +43,30 @@ body {
 .main-page {
   position: absolute;
   width: 100%;
-  -webkit-clip-path: polygon(0 0, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 0);
-          clip-path: polygon(0 0, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 0);
+  z-index: 2;
+}
+
+.main-page.healed {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
 }
 
 .shadow-page {
   position: absolute;
   width: 100%;
   top: 0;
-  -webkit-clip-path: polygon(0 100%, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 100%);
-          clip-path: polygon(0 100%, 0 calc(var(--break-y) + 0px), 100% calc(var(--break-y) - 0px), 100% 100%);
-  background: rgba(200, 100, 100, 0.2);
-  -webkit-transition: top 2s ease;
-  transition: top 2s ease;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+  z-index: 1;
 }
 
 .shadow-page.cracked {
+  visibility: visible;
   top: 200px;
+}
+
+.shadow-page.healed {
+  visibility: hidden;
 }
 
 .content {
