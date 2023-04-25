@@ -271,8 +271,6 @@ hr {
 }
 
 .shadow-section .shadow-content .label-col {
-  -webkit-animation: flicker 1s ease-in-out infinite alternate;
-          animation: flicker 1s ease-in-out infinite alternate;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,6 +282,7 @@ hr {
           flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding-left: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -317,10 +316,41 @@ hr {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 15px;
+  margin-left: 30px;
+}
+
+.shadow-section .shadow-content .content-col ul {
+  max-width: 500px;
+}
+
+.shadow-section .shadow-content .content-col li {
+  margin-bottom: 7px;
+}
+
+.shadow-section .shadow-content .content-col img {
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: auto;
+  height: auto;
+}
+
+.shadow-section.shadow-contract .shadow-content .content-col img {
+  max-width: 400px;
+  max-height: 170px;
+}
+
+.shadow-section.shadow-move-in .shadow-content .content-col img {
+  max-width: 400px;
+}
+
+.shadow-section.shadow-change .shadow-content .content-col img {
+  max-width: 400px;
 }
 
 @-webkit-keyframes flicker {
-  10%, 29%, 33%, 100% {
+  10%, 30%, 32%, 100% {
     -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
             filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
   }
@@ -329,13 +359,13 @@ hr {
             filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
   }
   31% {
-    -webkit-filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
-            filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+    -webkit-filter: drop-shadow(0 0 3.5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 13px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+            filter: drop-shadow(0 0 3.5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 13px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
   }
 }
 
 @keyframes flicker {
-  10%, 29%, 33%, 100% {
+  10%, 30%, 32%, 100% {
     -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
             filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
   }
@@ -344,8 +374,8 @@ hr {
             filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
   }
   31% {
-    -webkit-filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
-            filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+    -webkit-filter: drop-shadow(0 0 3.5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 13px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+            filter: drop-shadow(0 0 3.5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 13px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
   }
 }
 

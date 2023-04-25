@@ -227,6 +227,10 @@ hr {
   margin: 20px 0;
 }
 
+$neonColor: #00f;
+$neonDarkColor: #00c;
+$neonDarkGlowColor: rgba(0, 0, 0, 0.2);
+
 .shadow-section {
   position: absolute;
   visibility: hidden;
@@ -255,14 +259,15 @@ hr {
       // drop-shadow(0 0 100px #f0f)
       // drop-shadow(0 0 30px #f0f);
       // animation: flicker 2.5s infinite alternate;
-      animation: flicker 1s ease-in-out infinite alternate;
+      // animation: flicker 1s ease-in-out infinite alternate;
+
       color: white;
       display: flex;
       // width: 20%;
       flex-basis: 221px;
       flex-grow: 0;
       flex-shrink: 0;
-      // padding-left: 30px;
+      padding-left: 30px;
       flex-direction: column;
       align-items: flex-end;
       margin-right: 25px;
@@ -282,17 +287,42 @@ hr {
       display: flex;
       flex-direction: row;
       gap: 15px;
+      margin-left: 30px;
+      ul {
+        max-width: 500px;
+        // line-height: 1.5rem;
+      }
+      li {
+        margin-bottom: 7px;
+      }
+      img {
+        display: block;
+        align-self: center;
+        width: auto;
+        height: auto;
+      }
     }
+  }
+  &.shadow-contract .shadow-content .content-col img{
+    max-width: 400px;
+    max-height: 170px;
+  }
+  &.shadow-move-in .shadow-content .content-col img{
+    max-width: 400px;
+    // max-width: 500px;
+    // max-height: 330px;
+  }
+  &.shadow-change .shadow-content .content-col img{
+    max-width: 400px;
+    // max-height: 170px;
   }
 }
 
-$neonColor: #00f;
-$neonDarkColor: #00c;
-$neonDarkGlowColor: rgba(0, 0, 0, 0.2);
+
 
 @keyframes flicker {
   // 0%, 18%, 21%, 25%, 53%, 57%, 100% {
-  10%, 29%, 33%, 100%{
+  10%, 30%, 32%, 100%{
     filter: drop-shadow(0 0 4px #fff)
         drop-shadow(0 0 15px #fff)
         drop-shadow(0 0 40px $neonColor)
@@ -308,11 +338,11 @@ $neonDarkGlowColor: rgba(0, 0, 0, 0.2);
         drop-shadow(0 0 130px $neonColor);
   }
   31%{
-    filter: drop-shadow(0 0 3.5px $neonDarkColor)
-        drop-shadow(0 0 13px $neonDarkColor);
-        // drop-shadow(0 0 35px $neonDarkGlowColor)
-        // drop-shadow(0 0 70px $neonDarkGlowColor)
-        // drop-shadow(0 0 130px $neonDarkGlowColor);
+    filter: drop-shadow(0 0 3.5px rgba(255, 255, 255, 0.4))
+        drop-shadow(0 0 13px rgba(255, 255, 255, 0.4))
+        drop-shadow(0 0 35px $neonColor)
+        drop-shadow(0 0 70px $neonColor)
+        drop-shadow(0 0 130px $neonColor);
   }
 }
 
