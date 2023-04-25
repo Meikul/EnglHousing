@@ -9,9 +9,9 @@ $aggieBlue: #05325B;
 
 $slideDuration: 1s;
 
-// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -237,9 +237,13 @@ $neonDarkGlowColor: rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: #222;
   width: 100%;
-  padding: 60px 0;
-  h2,p{
-    // font-family: 'Roboto Mono', sans-serif;
+  padding: 50px 0 60px 0;
+  h1, h2, h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+  }
+  p, li {
+    font-family: 'Source Sans Pro', sans-serif;
   }
   &.showing {
     visibility: visible;
@@ -288,7 +292,7 @@ $neonDarkGlowColor: rgba(0, 0, 0, 0.2);
       flex-direction: row;
       gap: 15px;
       margin-left: 30px;
-      ul {
+      ul, ol {
         max-width: 500px;
         // line-height: 1.5rem;
       }
@@ -297,9 +301,12 @@ $neonDarkGlowColor: rgba(0, 0, 0, 0.2);
       }
       img {
         display: block;
-        align-self: center;
+        // align-self: center;
         width: auto;
         height: auto;
+      }
+      div {
+        // align-self: center;
       }
     }
   }
@@ -308,9 +315,9 @@ $neonDarkGlowColor: rgba(0, 0, 0, 0.2);
     max-height: 170px;
   }
   &.shadow-move-in .shadow-content .content-col img{
-    max-width: 400px;
+    max-width: 450px;
     // max-width: 500px;
-    // max-height: 330px;
+    max-height: 300px;
   }
   &.shadow-change .shadow-content .content-col img{
     max-width: 400px;

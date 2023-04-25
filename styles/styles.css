@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -248,7 +249,16 @@ hr {
   overflow: hidden;
   background-color: #222;
   width: 100%;
-  padding: 60px 0;
+  padding: 50px 0 60px 0;
+}
+
+.shadow-section h1, .shadow-section h2, .shadow-section h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.shadow-section p, .shadow-section li {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .shadow-section.showing {
@@ -319,7 +329,7 @@ hr {
   margin-left: 30px;
 }
 
-.shadow-section .shadow-content .content-col ul {
+.shadow-section .shadow-content .content-col ul, .shadow-section .shadow-content .content-col ol {
   max-width: 500px;
 }
 
@@ -329,9 +339,6 @@ hr {
 
 .shadow-section .shadow-content .content-col img {
   display: block;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   width: auto;
   height: auto;
 }
@@ -342,7 +349,8 @@ hr {
 }
 
 .shadow-section.shadow-move-in .shadow-content .content-col img {
-  max-width: 400px;
+  max-width: 450px;
+  max-height: 300px;
 }
 
 .shadow-section.shadow-change .shadow-content .content-col img {
