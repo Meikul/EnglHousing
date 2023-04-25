@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,7 +14,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: #aaa;
+  background: white;
 }
 
 .the-wrapper {
@@ -73,8 +74,8 @@ body {
           transform: translate(0, 50px);
   left: 0;
   z-index: 2;
-  -webkit-filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.75));
-          filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.75));
+  -webkit-filter: drop-shadow(0px 25px 5px rgba(0, 0, 0, 0.75));
+          filter: drop-shadow(0px 25px 5px rgba(0, 0, 0, 0.75));
 }
 
 .page-drop-shadow-wrapper .page-drop-shadow {
@@ -247,11 +248,105 @@ hr {
   overflow: hidden;
   background-color: #222;
   width: 100%;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .shadow-section.showing {
   visibility: visible;
+}
+
+.shadow-section .shadow-content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: 25px;
+  color: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.shadow-section .shadow-content .label-col {
+  -webkit-animation: flicker 1s ease-in-out infinite alternate;
+          animation: flicker 1s ease-in-out infinite alternate;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 221px;
+      flex-basis: 221px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 25px;
+}
+
+.shadow-section .shadow-content .label-col img {
+  width: 86px;
+}
+
+.shadow-section .shadow-content .label-col h2 {
+  font-size: 22pt;
+  margin: 15px 0 0 0;
+  text-align: right;
+}
+
+.shadow-section .shadow-content .label-col p {
+  margin: 0;
+}
+
+.shadow-section .shadow-content .content-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+}
+
+@-webkit-keyframes flicker {
+  10%, 29%, 33%, 100% {
+    -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
+            filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
+  }
+  0%, 20%, 40% {
+    -webkit-filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+            filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+  }
+  31% {
+    -webkit-filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+            filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+  }
+}
+
+@keyframes flicker {
+  10%, 29%, 33%, 100% {
+    -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
+            filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 40px #00f) drop-shadow(0 0 80px #00f) drop-shadow(0 0 140px #00f);
+  }
+  0%, 20%, 40% {
+    -webkit-filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+            filter: drop-shadow(0 0 3.5px #fff) drop-shadow(0 0 13px #fff) drop-shadow(0 0 35px #00f) drop-shadow(0 0 70px #00f) drop-shadow(0 0 130px #00f);
+  }
+  31% {
+    -webkit-filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+            filter: drop-shadow(0 0 3.5px #00c) drop-shadow(0 0 13px #00c);
+  }
 }
 
 .c-1 {
